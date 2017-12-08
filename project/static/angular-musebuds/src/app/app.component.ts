@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+
+  getURL() {
+    return "url('assets/images/dance2.jpeg')"; 
+  }
 }
