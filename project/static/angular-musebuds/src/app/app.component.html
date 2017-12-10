@@ -1,25 +1,25 @@
 <!-- Showcase -->
 <header id="showcase">
-  <div class="bg-image" [ngStyle]="{ 'background-image': getURL()}"></div>
+  <div class="bg-image" [ngStyle]="{ 'background-image': getURL() }"></div>
   <div class="container-fluid">
     <div class="row justify-content-center">
       <div class="col-12 px-0">
         <nav class="navbar navbar-light bg-light justify-content-between">
-			<img src="assets/images/logo3.png" width="150" height="48" class="d-inline-block align-top" alt="">
+          <logo></logo>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText"
             aria-expanded="false" Toggle navigation="">
             <i class="navbar-toggler-icon"></i>
           </button>
           <div class="collapse navbar-collapse text-right" id="navbarText">
             <ul class="navbar-nav">
-              <li class="nav-item active">
-                <a href="nav-link" class="nav-link">Home</a>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Home</a>
               </li>
               <li class="nav-item">
-                <a href="nav-link" class="nav-link">Trending</a>
+                <a href="#" class="nav-link">Trending</a>
               </li>
               <li class="nav-item">
-                <a href="nav-link" class="nav-link">Lorem.</a>
+                <a href="#" class="nav-link">Lorem.</a>
             </ul>
           </div>
         </nav>
@@ -28,9 +28,10 @@
   </div>
 </header>
 
+<!-- Logon box -->
 <div class="container-fluid">
   <div class="row justify-content-center align-items-center" id="logon-box">
-    <div class="col-xs-12 col-sm-6 col-lg-6 col-sm-offset-3">
+    <div class="col-xs-12 col-sm-6 col-lg-3">
       <form>
         <div class="form-group">
           <label for="exampleInputEmail" class="h5">Login</label>
@@ -38,16 +39,17 @@
         </div>
         <div class="form-group">
           <input type="password" class="form-control" id="exampleInputPassword" aria-describedby="emailPasswordHelp" placeholder="Password">
+          <div class="form-check">
+            <label class="form-check-label">
+              <input type="checkbox" class="form-check-input">
+              <small class="form-text mt-0" id="checkboxText">Remember me</small>
+            </label>
+          </div>
           <small class="form-text" id="emailPasswordHelp">
             <a href="#">Forgot username or password?</a>
-			<a href="#"><br>Not a member? Sign up now</a>
+            <a href="#">
+              <br>Not a member? Sign up now</a>
           </small>
-        </div>
-        <div class="form-check">
-          <label class="form-check-label">
-            <input type="checkbox" class="form-check-input">
-            <small class="form-text mt-0" id="checkboxText">Remember me</small>
-          </label>
         </div>
         <button type="submit" class="btn btn-primary" id="form-submit">
           Sign in
