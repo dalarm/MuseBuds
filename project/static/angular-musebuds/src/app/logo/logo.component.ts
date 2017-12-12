@@ -20,7 +20,7 @@ export class LogoComponent implements OnInit {
     return this.isHovered; 
   }
   getLogo() {
-    this.logoURL = this.isHovered ? "assets/images/logo2.png" : "assets/images/logo3.png"; 
+    this.logoURL = this.isHovered ? "assets/images/logo4.png" : "assets/images/logo3.png"; 
     return this.logoURL; 
   }
   constructor() { }
