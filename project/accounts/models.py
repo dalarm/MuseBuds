@@ -19,7 +19,7 @@ class Profile(models.Model):
 		('VR', 'Videographer')
 	}
 
-	user = models.OneToOneField(User, null=True, on_delete=models.CASCADE, related_name="user")
+	user = models.OneToOneField(User, null=True, on_delete=models.CASCADE)
 	name = models.CharField(max_length=50)
 	gender = models.CharField(max_length=1, choices=GENDER_CHOICES, null=True, blank=True)
 	description = models.TextField(null=True, blank=True)
