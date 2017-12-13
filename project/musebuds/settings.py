@@ -39,6 +39,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'home',
     'accounts',
+    'djng',
+    'crispy_forms',
+    'corsheaders',
+    'rest_framework',
+    'multiselectfield',
 ]
 
 MIDDLEWARE = [
@@ -49,6 +54,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'musebuds.urls'
@@ -68,6 +74,9 @@ TEMPLATES = [
         },
     },
 ]
+
+
+CORS_ORIGIN_ALLOW_ALL = True
 
 WSGI_APPLICATION = 'musebuds.wsgi.application'
 
@@ -119,6 +128,20 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
+
+STATICFILES_DIRS = [
+	('node_modules', 'static/angular-musebuds/node_modules'),
+]
+
 STATIC_URL = '/static/'
 LOGIN_REDIRECT_URL = '/'
-MEDIA_ROOT ='accounts/uploads'
+MEDIA_URL = '/images/'
+MEDIA_ROOT ='accounts/images'
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES':
+        ['rest_framework.permissions.IsAdminUser'],
+    'DEFAULT_PAGINATION_CLASS' : 'rest_framework.pagination.LimitOffsetPagination',
+    'PAGE_SIZE' : 10
+}
+
