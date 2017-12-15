@@ -57,6 +57,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+CORS_ORIGIN_ALLOW_ALL = True
 ROOT_URLCONF = 'musebuds.urls'
 
 TEMPLATES = [
@@ -76,7 +77,6 @@ TEMPLATES = [
 ]
 
 
-CORS_ORIGIN_ALLOW_ALL = True
 
 WSGI_APPLICATION = 'musebuds.wsgi.application'
 
