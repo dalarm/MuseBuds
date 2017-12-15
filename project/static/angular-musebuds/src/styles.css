@@ -5,6 +5,10 @@ body {
 }
 
 form {
+    padding: 0.5em; 
+}
+
+#logon-box form {
     background-color: white; 
     border-radius: 2px; 
     padding: 1em; 
