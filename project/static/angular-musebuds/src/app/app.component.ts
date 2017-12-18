@@ -14,7 +14,7 @@ export class AppComponent {
   url: string = 'http://localhost:8000/accounts/'
   bg1 = "url('assets/images/dance2.jpeg')"
   bg2 = "url('assets/images/bg2.png')"
-  isHome: boolean = true
+  isHome: boolean
   constructor(private http: Http){}
 
   public getProfiles(){

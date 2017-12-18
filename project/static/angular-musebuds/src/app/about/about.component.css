@@ -34,6 +34,7 @@
 }
 
 #introButton{
+    line-height: 80px;
     margin-top: 5%;
     position: relative;
     border: 1px solid white;
@@ -60,7 +61,7 @@
 
 #mirror{
 position: relative;
-bottom: 12%;
+bottom: 62%;
 opacity: 0.2;
 -moz-transform: scale(1, -1);
 -webkit-transform: scale(1, -1);
