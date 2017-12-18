@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { LogoComponent } from './logo/logo.component';
+import { LoginComponent } from './login/login.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { AboutComponent } from './about/about.component';
 
@@ -12,6 +13,7 @@ import { AboutComponent } from './about/about.component';
   declarations: [
     AppComponent,
     LogoComponent,
+    LoginComponent, 
     AboutComponent
   ],
   imports: [
@@ -23,4 +25,5 @@ import { AboutComponent } from './about/about.component';
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }

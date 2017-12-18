@@ -16,7 +16,8 @@ form {
 }
 
 .navbar{
-	padding:0rem .5rem
+    padding:0rem .5rem; 
+    flex-wrap: nowrap; 
 }
 
 .navbar-brand {
@@ -49,6 +50,12 @@ form {
 
 #form-submit {
     width: 100%; 
+}
+
+@media (max-width: 575px) {
+    #search-box {
+        width: 50%;  
+    }
 }
 
 
