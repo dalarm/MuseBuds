@@ -11,8 +11,10 @@ import 'rxjs/add/operator/toPromise';
 })
 export class AppComponent {
   title = 'app';
-  url : string = 'http://localhost:8000/accounts/'
-
+  url: string = 'http://localhost:8000/accounts/'
+  bg1 = "url('assets/images/dance2.jpeg')"
+  bg2 = "url('assets/images/bg2.png')"
+  home = true
   constructor(private http: Http){}
 
   public getProfiles(){
@@ -22,6 +24,13 @@ export class AppComponent {
   }
   
   getURL() {
-    return "url('assets/images/dance2.jpeg')"; 
+    return this.home ? this.bg1:this.bg2
   }
+
+  changeBG(){
+    this.home = false;
+    login = document.getElementById("login")
+    login.style.display = "none";
+  }
+
 }
