@@ -1,4 +1,5 @@
 /* Tag selectors */
+
 body {
     padding: 0; 
     margin: 0; 
@@ -29,6 +30,10 @@ form {
     margin: 0; 
     background-position: center; 
     background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     width: 100%; 
     height: 100%; 
     z-index: -1;

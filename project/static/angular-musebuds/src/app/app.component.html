@@ -1,4 +1,5 @@
 <!-- Showcase -->
+
 <header id="showcase">
   <div class="bg-image" [ngStyle]="{ 'background-image': getURL() }"></div>
   <div class="container-fluid">
@@ -33,8 +34,8 @@
               <li class="nav-item">
                 <a href="#" class="nav-link">Trending</a>
               </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">About</a>
+              <li (click)="changeBG()" class="nav-item">
+                <a routerLink="about" href="about" class="nav-link">About</a>
             </ul>
           </div>
         </nav>
@@ -43,8 +44,12 @@
   </div>
 </header>
 
-<div style="text-align:center">
+<router-outlet></router-outlet>
+
+<!-- <div style="text-align:center;">
   <button (click)="getProfiles()"> Get /profiles </button>
 </div>
  
 <login></login>
+
+</div> -->
