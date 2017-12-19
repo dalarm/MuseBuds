@@ -15,7 +15,22 @@ export class AppComponent {
   bg1 = "url('assets/images/dance2.jpeg')"
   bg2 = "url('assets/images/bg2.png')"
   isHome: boolean
-  constructor(private http: Http){}
+  currentURL = '';
+  pathArray = [];
+  constructor(private http: Http){
+    this.currentURL = window.location.href;
+    this.pathArray = this.currentURL.split('/')
+  }
+
+  private checkURL(){
+    this.currentURL = window.location.href;
+    this.pathArray = this.currentURL.split('/')
+    this.changeBG()
+  }
+
+  onClick(){
+    this.checkURL()
+  }
 
   public getProfiles(){
     this.http.get(this.url).toPromise().then((res)=>{
@@ -23,12 +38,11 @@ export class AppComponent {
     });
   }
   
-  getURL() {
-    return this.isHome ? this.bg1:this.bg2
-  }
-
-  changeBG(){
-    this.isHome = false;
+  changeBG() {
+    if(this.pathArray[3] === "#")
+      return this.bg1
+    else
+      return this.bg2 
   }
 
 }

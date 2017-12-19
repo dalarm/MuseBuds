@@ -7,6 +7,7 @@ import { LogoComponent } from './logo/logo.component';
 import { LoginComponent } from './login/login.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { AboutComponent } from './about/about.component';
+import { NavigationComponent } from './navigation/navigation.component';
 
 
 @NgModule({
@@ -14,7 +15,7 @@ import { AboutComponent } from './about/about.component';
     AppComponent,
     LogoComponent,
     LoginComponent, 
-    AboutComponent
+    AboutComponent, NavigationComponent
   ],
   imports: [
     BrowserModule,

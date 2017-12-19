@@ -8,12 +8,10 @@ import { Component, OnInit, Input } from '@angular/core';
 export class LoginComponent implements OnInit{
 
   ngOnInit(){}
-
-  @Input() isHome : boolean;
-
+  @Input() pathArray = [];
+  
   toggleForm(){
-    console.log(this.isHome)
-    if(this.isHome === false){
+    if(this.pathArray[3] != "#"){
       let login = document.getElementById("login")
       login.style.display = "none";
     }
