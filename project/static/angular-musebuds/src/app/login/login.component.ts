@@ -11,7 +11,7 @@ export class LoginComponent implements OnInit{
   @Input() pathArray = [];
   
   toggleForm(){
-    if(this.pathArray[3] != "#"){
+    if(this.pathArray[3] != "#" && this.pathArray[3] != ""){
       let login = document.getElementById("login")
       login.style.display = "none";
     }

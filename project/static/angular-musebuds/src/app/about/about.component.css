@@ -1,6 +1,6 @@
 .pulse:hover{
     animation-name: pulsate; 
-    animation-duration: 1s 
+    animation-duration: 1s; 
 }
 
 @keyframes pulsate{
@@ -17,6 +17,92 @@
     }
 }
 
+.fadeOut{
+    animation: fadeO 1s forwards;
+    animation-name: fadeO;
+}
+
+@keyframes fadeO{
+    0%{
+        opacity: 1;
+    }
+
+    50%{
+        opacity: 0.5;
+    }
+
+    100%{
+        opacity: 0;
+    }
+}
+
+.fadeIn{
+    animation: fadeI 1s forwards;
+    animation-name: fadeI;
+}
+
+@keyframes fadeI{
+    0%{
+
+        opacity: 0;
+    }
+
+    50%{
+
+        opacity: 0.5;
+    }
+
+    100%{
+
+        opacity:1;
+    }
+}
+
+
+.ptext{
+    font-family: PT Sans;
+    font-size: 25px;
+}
+
+#show{
+    display: none;
+    opacity: 0;
+}
+
+#show img{
+    height: 120px;
+    border: solid 1px black;
+    border-radius: 15%;
+    opacity: 0.5;
+}
+
+#show img:hover{
+    opacity: 1;
+}
+
+#notes{
+    height: 100px;
+    margin-left: 15%;
+    position: absolute;
+    margin-top: 11%;
+    display:none;
+    opacity:0;
+}
+
+#combined{
+    height: 100px;
+    margin-left: 15%;
+    position: absolute;
+    margin-top: 11%;
+    display: none;
+    opacity: 0;
+}
+
+#collab{
+    display: none;
+    opacity: 0;
+}
+
 .text{
     font-family: Bungee;
     font-size: 30px;
@@ -28,12 +114,12 @@
     width: 80%;
     margin: 0 auto;
     margin-top: 7%;
-    height: 500px;
+    height: 550px;
     background: rgba(255, 255, 255, 0.9); 
     border-radius: 1%;
 }
 
-#introButton{
+.introButton{
     line-height: 80px;
     margin-top: 5%;
     position: relative;
@@ -54,7 +140,7 @@
                 inset 0px 0px 3px rgba(255,255,255,.5);
 }
 
-#introButton:hover{
+.introButton:hover{
     border: 1px solid black;
     color:black;
 }

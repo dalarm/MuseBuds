@@ -22,14 +22,10 @@ export class AppComponent {
     this.pathArray = this.currentURL.split('/')
   }
 
-  private checkURL(){
+  onClick(){
     this.currentURL = window.location.href;
     this.pathArray = this.currentURL.split('/')
     this.changeBG()
-  }
-
-  onClick(){
-    this.checkURL()
   }
 
   public getProfiles(){
@@ -39,7 +35,7 @@ export class AppComponent {
   }
   
   changeBG() {
-    if(this.pathArray[3] === "#")
+    if(this.pathArray[3] === "#" || this.pathArray[3] === "")
       return this.bg1
     else
       return this.bg2 

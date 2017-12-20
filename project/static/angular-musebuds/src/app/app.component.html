@@ -1,9 +1,9 @@
 <!-- Showcase -->
 
 <header id="showcase">
-  <div class="bg-image" [ngStyle]="{ 'background-image': changeBG() }"></div>
   <navigation (change)="onClick()"></navigation>
 </header>
+<div class="bg-image" [ngStyle]="{ 'background-image': changeBG() }"></div>
 
 <router-outlet></router-outlet>
 

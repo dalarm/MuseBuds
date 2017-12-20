@@ -1,11 +1,44 @@
-<div class="text" id="about">    
-    <div class="pulse" id="introButton">
+<img id="notes" [src]="getPic('n')">
+<img id="combined" [src]="getPic('c')">
+<div class="text" id="about">
+    <div class="pulse introButton" (click)="showcase()">
     Showcase<p id="mirror">Showcase</p>
     </div>
 
-    <div class="pulse" id="introButton">
+    <div class="pulse introButton" (click)="collab()">
     Collab<p id="mirror">Collab</p>
     </div>
 
+<div id="summary">
     <h1>Welcome to MuseBuds</h1>
+    <p class="ptext">Showcase your skills and collaborate with others around the world. 
+        Through MuseBuds, you will obtain instant access to other talented 
+        individuals that share the same passions as you.
+    </p>
+
+    <img [src]= "getPic('s')">
+</div>
+
+<div id="show">
+    <h1>Showcase</h1>
+    <p class="ptext">
+            Share your work with others!<br> With MuseBuds, you can create your very own online portfolio 
+            showcasing your latest works. 
+    </p>
+    <div>
+        <img [src]="getPic('g')">
+        <img [src]= "getPic('m')">
+        <img [src] = "getPic('d')">
+        <img [src] = "getPic('ca')">
+    </div>
+
+</div>
+
+<div id="collab">
+    <h1>Collaborate</h1>
+    <p class="ptext">
+            With our unique search algorithm, finding a partner to collaborate with will take 
+            no time at all. Looking for a professional musician? Or are you looking for a beginner 
+            to grow with? With MuseBuds, you can find people in all skill levels.
+    </p>
 </div>
