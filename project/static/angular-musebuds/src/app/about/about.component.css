@@ -69,6 +69,8 @@
     opacity: 0;
 }
 
+/*Show is basically the showcase section. The show imgs are targeting
+the icons. */
 #show img{
     height: 120px;
     border: solid 1px black;
@@ -79,6 +81,9 @@
 #show img:hover{
     opacity: 1;
 }
+
+/*These are the notes that are positioned to the left. It switches to "combined" notes by turning
+invisible with show. Combined appears with collab.*/
 
 #notes{
     height: 100px;

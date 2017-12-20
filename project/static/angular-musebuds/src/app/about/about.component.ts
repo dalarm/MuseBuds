@@ -22,6 +22,16 @@ showcase(){
   let collaborate = document.getElementById("collab");
   let intro = document.getElementById("summary");
   
+
+//This deals with all the things in the showcase section.
+//Maybe there's a way to thin this messy code, but i'm not too sure how to do
+//animations too well yet.
+//Basically, I'm toggling the "fade" animation to make the collab portion
+//Fade in when it's needed and fade out when it's exiting.
+//The two if conditions are counting the 2 situations: 
+// 1. If showcase is clicked first.
+// 2. If showcase is clicked after collab was clicked.
+
   if(intro.classList.contains("fadeOut") == false){
     intro.className += "fadeOut";
     intro.style.display = "none";
@@ -45,6 +55,15 @@ showcase(){
   }
 }
 
+
+//This deals with all the things in the collab section.
+//Maybe there's a way to thin this messy code, but i'm not too sure how to do
+//animations too well yet.
+//Basically, I'm toggling the "fade" animation to make the collab portion
+//Fade in when it's needed and fade out when it's exiting.
+//The two if conditions are counting the 2 situations: 
+// 1. If collab is clicked first.
+// 2. If collab is clicked after showcase was clicked.
 collab(){
   let combine  = document.getElementById("combined");
   let note = document.getElementById("notes");
@@ -73,6 +92,9 @@ collab(){
       collaborate.classList.toggle("fadeIn");
   }
 }
+
+//This gets the pic url that you want. You give it a string to let the function know
+//which one to return.
 
 getPic(pic){
   if(pic === "n")
