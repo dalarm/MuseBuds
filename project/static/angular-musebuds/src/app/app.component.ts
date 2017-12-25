@@ -9,6 +9,7 @@ import 'rxjs/add/operator/toPromise';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
   title = 'app';
   url: string = 'http://localhost:8000/accounts/'
@@ -17,28 +18,27 @@ export class AppComponent {
   isHome: boolean
   currentURL = '';
   pathArray = [];
-  constructor(private http: Http){
+  constructor(private http: Http) {
     this.currentURL = window.location.href;
     this.pathArray = this.currentURL.split('/')
   }
 
-  onClick(){
+  onClick() {
     this.currentURL = window.location.href;
     this.pathArray = this.currentURL.split('/')
     this.changeBG()
   }
 
-  public getProfiles(){
-    this.http.get(this.url).toPromise().then((res)=>{
+  public getProfiles() {
+    this.http.get(this.url).toPromise().then((res) => {
       console.log(res.json());
     });
   }
-  
   changeBG() {
-    if(this.pathArray[3] === "#" || this.pathArray[3] === "")
+    if (this.pathArray[3] === "login")
       return this.bg1
     else
-      return this.bg2 
+      return this.bg2
   }
 
 }
