@@ -9,19 +9,24 @@ import { AppRoutingModule } from './/app-routing.module';
 import { AboutComponent } from './about/about.component';
 import { NavigationComponent } from './navigation/navigation.component';
 
+// For Animations
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
+
 
 @NgModule({
   declarations: [
     AppComponent,
     LogoComponent,
     LoginComponent, 
-    AboutComponent, NavigationComponent
+    AboutComponent, 
+    NavigationComponent
   ],
   imports: [
     BrowserModule,
     CommonModule,
     HttpModule,
-    AppRoutingModule
+    AppRoutingModule, 
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

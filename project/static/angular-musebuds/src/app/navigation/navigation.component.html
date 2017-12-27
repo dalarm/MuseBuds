@@ -16,20 +16,20 @@
               <i class="fa fa-search" aria-hidden="true"></i>
             </button>
           </form>
-          <button class="navbar-toggler my-2" type="button" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation" [ngStyle]="{ 'background-color': isExpanded ? 'lightgray' : 'white'}" (click)="toggle()" (blur)="toggle()">
+          <button class="navbar-toggler my-2" type="button" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation" [ngStyle]="{ 'background-color': isExpanded ? 'lightgray' : 'white'}" (click)="toggle()" (blur)="!isMousedOver ? toggle() : isExpanded">
             <i class="navbar-toggler-icon"></i>
           </button>
         </div>
 
         <div class="navbar-collapse" id="navbarText" [hidden]="!isExpanded">
           <ul class="navbar-nav">
-            <li (click)="changeBG()" class="nav-item">
+            <li (click)="changeBG()" class="nav-item" (click)=toggle() (mouseenter)="toggleMouseEnter()" (mouseleave)="toggleMouseLeave()">
               <a routerLink="login" href="login" class="nav-link">Home</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" (click)=toggle() (mouseenter)="toggleMouseEnter()" (mouseleave)="toggleMouseLeave()">
               <a href="#" class="nav-link">Trending</a>
             </li>
-            <li (click)="changeBG()" class="nav-item">
+            <li (click)="changeBG()" class="nav-item" (click)=toggle() (mouseenter)="toggleMouseEnter()" (mouseleave)="toggleMouseLeave()">
               <a routerLink="about" href="about" class="nav-link">About</a>
           </ul>
         </div>
