@@ -1,15 +1,10 @@
 <img id="notes" [src]="getPic('n')">
 <img id="combined" [src]="getPic('c')">
 <div class="text" id="about">
-    <div class="pulse introButton" (click)="showcase()">
-    Showcase<p id="mirror">Showcase</p>
-    </div>
 
-    <div class="pulse introButton" (click)="collab()">
-    Collab<p id="mirror">Collab</p>
-    </div>
 
 <div id="summary">
+    <br>
     <h1>Welcome to MuseBuds</h1>
     <p class="ptext">Showcase your skills and collaborate with others around the world. 
         Through MuseBuds, you will obtain instant access to other talented 
@@ -18,6 +13,14 @@
 
     <img [src]= "getPic('s')">
 </div>
+
+    <div class="pulse introButton" (click)="showcase()">
+    Showcase<p id="mirror">Showcase</p>
+    </div>
+
+    <div class="pulse introButton" (click)="collab()">
+    Collab<p id="mirror">Collab</p>
+    </div>
 
 <div id="show">
     <h1>Showcase</h1>

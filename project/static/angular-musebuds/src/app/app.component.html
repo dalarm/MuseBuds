@@ -3,10 +3,11 @@
 <header id="showcase">
   <navigation (change)="onClick()"></navigation>
 </header>
-<div class="bg-image" [ngStyle]="{ 'background-image': changeBG() }"></div>
-
-<!-- Routing Tag -->
+<div class="bg-image" [ngStyle]="{ 'background-image': changeBG() }">
+</div>
 <router-outlet></router-outlet>
+<!-- Routing Tag -->
+
 
 <!-- <div style="text-align:center;">
   <button (click)="getProfiles()"> Get /profiles </button>
