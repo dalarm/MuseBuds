@@ -1,16 +1,22 @@
-import { Component, OnInit, Output, Input, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'navigation',
   templateUrl: './navigation.component.html',
   styleUrls: ['./navigation.component.css']
 })
+
 export class NavigationComponent implements OnInit {
-  @Output() change = new EventEmitter();
+  ngOnInit() { }
 
-  ngOnInit(){}
+  @Output('change') change = new EventEmitter();
+  isExpanded: boolean;
 
-  changeBG(){
+  toggle() {
+    this.isExpanded = !this.isExpanded;
+  }
+
+  changeBG() {
     this.change.emit();
   }
 }
