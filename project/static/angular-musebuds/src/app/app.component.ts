@@ -35,7 +35,7 @@ export class AppComponent {
     });
   }
   changeBG() {
-    if (this.pathArray[3] === "login")
+    if (this.pathArray[3] === "login" || this.pathArray[3] === "")
       return this.bg1
     else
       return this.bg2

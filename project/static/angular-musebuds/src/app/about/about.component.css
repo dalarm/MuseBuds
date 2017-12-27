@@ -118,7 +118,7 @@ invisible with show. Combined appears with collab.*/
     text-align: center;
     width: 80%;
     margin: 0 auto;
-    margin-top: 7%;
+    margin-top: 5%;
     height: 550px;
     background: rgba(255, 255, 255, 0.9); 
     border-radius: 1%;
@@ -160,4 +160,5 @@ opacity: 0.2;
 -ms-transform: scale(1, -1);
 transform: scale(1, -1);
 }
+
 
