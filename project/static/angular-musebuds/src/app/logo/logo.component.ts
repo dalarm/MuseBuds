@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LogoComponent implements OnInit {
 
-  isHovered = false; 
+  isHovered: boolean; 
   logoURL = "assets/images/logo3.png"; 
 
   toggleOn() {

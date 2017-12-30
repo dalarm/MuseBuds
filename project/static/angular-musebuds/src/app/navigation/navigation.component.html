@@ -21,7 +21,7 @@
           </button>
         </div>
 
-        <div class="navbar-collapse" id="navbarText" [hidden]="!isExpanded">
+        <div [@slideInOut]="isExpanded" class="navbar-collapse" id="navbarText" [hidden]="!isExpanded">
           <ul class="navbar-nav">
             <li (click)="changeBG()" class="nav-item" (click)=toggle() (mouseenter)="toggleMouseEnter()" (mouseleave)="toggleMouseLeave()">
               <a routerLink="login" href="login" class="nav-link">Home</a>
