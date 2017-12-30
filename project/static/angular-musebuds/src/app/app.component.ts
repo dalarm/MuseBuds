@@ -25,7 +25,7 @@ interface ProfileData{
 
 export class AppComponent implements OnInit {
   user: ProfileData;
-  results: Array<{}>;
+  results: Array<ProfileData>;
   data: any = null;
   title = 'app';
   url: string = 'http://localhost:8000/accounts/'
