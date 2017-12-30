@@ -16,7 +16,7 @@
               <i class="fa fa-search" aria-hidden="true"></i>
             </button>
           </form>
-          <button class="navbar-toggler my-2" type="button" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation" [ngStyle]="{ 'background-color': isExpanded ? 'lightgray' : 'white'}" (click)="toggle()" (blur)="!isMousedOver ? toggle() : isExpanded">
+          <button class="navbar-toggler my-2" type="button" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation" [ngStyle]="{ 'background-color': isExpanded ? 'lightgray' : 'white'}" (click)="toggle()" (blur)="!isMousedOver && isExpanded ? toggle() : isExpanded">
             <i class="navbar-toggler-icon"></i>
           </button>
         </div>

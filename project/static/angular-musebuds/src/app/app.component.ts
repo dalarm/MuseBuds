@@ -1,22 +1,18 @@
 import { Component, OnInit } from '@angular/core';
-import { Http, Response, Headers} from '@angular/http';
-import { HttpClient} from '@angular/common/http';
+import { Http, Response, Headers } from '@angular/http';
+import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import 'rxjs/add/operator/toPromise';
 import 'rxjs/add/operator/map'
 
 
-
-
-
-interface ProfileData{
+interface ProfileData {
   name: string;
   gender: string;
   description: string;
   profilePic: string;
-  focus: Array<{sk: string, sk2: string, sk3: string}>;
+  focus: Array<{ sk: string, sk2: string, sk3: string }>;
 }
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -39,19 +35,19 @@ export class AppComponent implements OnInit {
     this.pathArray = this.currentURL.split('/')
   }
 
-  ngOnInit(): void{
+  ngOnInit(): void {
     this.http.get(this.url)
-             .map((res: Response) => res.json())
-             .subscribe(data => {
-               this.data = data;
-               this.results = data.results;
-               this.user = this.results[0];
-               console.log('Name: ' + this.user.name);
-               console.log('Gender :' + this.user.gender);
-               console.log('Picture :' + this.user.profilePic);
-               console.log(this.user.focus);
-               console.log('Description : ' + this.user.description);
-             });
+      .map((res: Response) => res.json())
+      .subscribe(data => {
+        this.data = data;
+        this.results = data.results;
+        this.user = this.results[0];
+        console.log('Name: ' + this.user.name);
+        console.log('Gender :' + this.user.gender);
+        console.log('Picture :' + this.user.profilePic);
+        console.log(this.user.focus);
+        console.log('Description : ' + this.user.description);
+      });
   }
 
   onClick() {
