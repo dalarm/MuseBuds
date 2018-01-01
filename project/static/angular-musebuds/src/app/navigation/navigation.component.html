@@ -16,7 +16,8 @@
               <i class="fa fa-search" aria-hidden="true"></i>
             </button>
           </form>
-          <button class="navbar-toggler my-2" type="button" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation" [ngStyle]="{ 'background-color': isExpanded ? 'lightgray' : 'white'}" (click)="toggle()" (blur)="!isMousedOver && isExpanded ? toggle() : isExpanded">
+          <button class="navbar-toggler my-2" type="button" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation"
+            [ngStyle]="{ 'background-color': isExpanded ? 'lightgray' : 'white'}" (click)="toggle()" (blur)="!isMousedOver && isExpanded ? toggle() : isExpanded">
             <i class="navbar-toggler-icon"></i>
           </button>
         </div>
@@ -31,6 +32,10 @@
             </li>
             <li (click)="changeBG()" class="nav-item" (click)=toggle() (mouseenter)="toggleMouseEnter()" (mouseleave)="toggleMouseLeave()">
               <a routerLink="about" href="about" class="nav-link">About</a>
+            </li>
+            <li (click)="changeBG()" class="nav-item" (click)=toggle() (mouseenter)="toggleMouseEnter()" (mouseleave)="toggleMouseLeave()">
+              <a routerLink="profile" href="profile" class="nav-link">Profile</a>
+            </li>
           </ul>
         </div>
       </nav>

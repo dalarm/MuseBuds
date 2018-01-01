@@ -9,9 +9,10 @@ import { LoginComponent } from './login/login.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { AboutComponent } from './about/about.component';
 import { NavigationComponent } from './navigation/navigation.component';
+import { ProfileComponent } from './profile/profile.component'; 
 
 // For Animations
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -20,7 +21,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     LogoComponent,
     LoginComponent, 
     AboutComponent, 
-    NavigationComponent
+    NavigationComponent, ProfileComponent
   ],
   imports: [
     BrowserModule,

@@ -64,6 +64,8 @@ export class AppComponent implements OnInit {
   changeBG() {
     if (this.pathArray[3] === "login" || this.pathArray[3] === "")
       return this.bg1
+    else if(this.pathArray[3] === "profile")
+      return ""; 
     else
       return this.bg2
   }
