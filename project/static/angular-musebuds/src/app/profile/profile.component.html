@@ -2,11 +2,12 @@
 
   <div class="row">
     <div class="col-sm-4">
-      <img class="border border-info mx-auto d-block rounded" id="profilePic" src="" alt="Profile picture">
+      <img class="border border-info mx-auto d-block rounded" id="profilePic" alt="Profile picture" src="{{ this.picture }}">
 
       <div class="row">
           <div class="col-sm-12 px-4" id="profileName">
-              <h2>{{ user?.name }} </h2>
+              <!--<h2>{{ user?.name }} </h2> -->
+              <h2>{{ this.name }}</h2>
             </div>
       </div>
 
@@ -18,9 +19,9 @@
             consequatur recusandae totam voluptatum.
           </p>
           <h5>Interests</h5>
-          <p>Videographer</p>
+          <p>{{ this.focus }}</p>
           <h5>Nicknames</h5>
-          <p>Thresh God</p>
+          <p>{{ this.description }}</p>
         </div>
       </div>
     </div>
