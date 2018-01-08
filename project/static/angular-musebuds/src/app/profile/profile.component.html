@@ -1,34 +1,41 @@
 <div class="container-fluid" id="aboutMe">
 
   <div class="row">
-    <div class="col-sm-4">
-      <img class="border border-info mx-auto d-block rounded" id="profilePic" alt="Profile picture" src="{{ this.picture }}">
+    <div class="col-sm-2 offset-sm-2" style="background-color: lightblue">
+      <img class="border border-dark d-block rounded mx-auto" id="profilePic" alt="Profile picture" src="{{ this.picture }}">
 
       <div class="row">
-          <div class="col-sm-12 px-4" id="profileName">
-              <!--<h2>{{ user?.name }} </h2> -->
-              <h2>{{ this.name }}</h2>
-            </div>
+        <div class="col-sm-12 text-center" id="profileName">
+          <h2>{{ this.name }}</h2>
+        </div>
       </div>
 
+      <hr>
+
       <div class="row" id="profileDesc">
-        <div class="col-sm-12 px-4">
-          <h2>About Me</h2>
+        <div class="col-sm-12 text-center">
+          <h2>Description</h2>
           <p>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo esse placeat voluptatum necessitatibus animi. Voluptates veniam
             consequatur recusandae totam voluptatum.
           </p>
           <h5>Interests</h5>
-          <p>{{ this.focus }}</p>
+          <p *ngFor="let interests of this.focus">
+            {{ interests }}
+          </p>
           <h5>Nicknames</h5>
-          <p>{{ this.description }}</p>
+          <ul>
+            <li *ngFor="let names of this.description">
+              {{ names }}
+            </li>
+          </ul>
         </div>
       </div>
     </div>
 
-    <div class="col-sm-8 text-center" id="profileName">
-      <h1 class="border border-primary rounded d-block">Your videos</h1>
-      
+    <div class="col-sm-6 text-center" id="profileContent" style="background-color: white">
+      <h1 class="border border-dark rounded d-block">Your videos</h1>
+
       <div class="row">
         <div class="col-sm-12 px-3">
           <h2 class="border border-danger rounded">Video here</h2>
@@ -43,15 +50,14 @@
           <h2 class="border border-danger rounded">Video here</h2>
           <h2 class="border border-danger rounded">Video here</h2>
         </div>
+      </div> <!-- .row -->
+    </div> <!-- .col --> 
+  </div> <!-- .row --> 
+  <div>
+    <div class="row">
+      <div class="col-sm-10 offset-sm-2">
+        <h4>suggested stuff</h4>
       </div>
     </div>
-
-    <div>
-      <button class="btn btn-default mx-2" (click)="loadUser()">Click me bro</button>
-      {{ profile | json }}
-    </div>
-
-
-  </div> <!-- .row --> 
-
-</div> <!-- #aboutMe --> 
+  </div>
+</div> <!-- #aboutMe -->
