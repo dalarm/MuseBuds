@@ -26,7 +26,7 @@ export class ProfileComponent implements OnInit {
   gender: string;
   picture: string;
   focus: Array<any>;
-  description: string;
+  description: string[];
 
   constructor(private profileService: ProfileService) { }
   ngOnInit() {
@@ -38,7 +38,7 @@ export class ProfileComponent implements OnInit {
       this.gender = this.user.gender;
       this.picture = this.user.profilePic;
       this.focus = this.user.focus;
-      this.description = this.user.description;
+      this.description = this.user.description.split('\n');
       console.log('Name: ' + this.user.name);
       console.log('Gender :' + this.user.gender);
       console.log('Picture :' + this.user.profilePic);
@@ -47,22 +47,7 @@ export class ProfileComponent implements OnInit {
     });
   }
 
-/*
   // Functions 
-  loadUser() {
-    this.profileService.getProfiles().subscribe(data => {
-      this.data = data;
-      this.results = data.results;
-      this.user = this.results[0];
-      console.log('Name: ' + this.user.name);
-      console.log('Gender :' + this.user.gender);
-      console.log('Picture :' + this.user.profilePic);
-      console.log(this.user.focus);
-      console.log('Description : ' + this.user.description);
-    });
-  }
-*/
-
    getInfo(choice: string) {
       if (choice === "name") {
         return this.name;
