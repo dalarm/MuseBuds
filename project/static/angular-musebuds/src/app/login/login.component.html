@@ -2,13 +2,54 @@
   <div id="login" class="container-fluid">
   <div class="row justify-content-center align-items-center" id="logon-box">
     <div class="col-xs-12 col-sm-6 col-lg-3">
-      <form>
+      <form #f="ngForm">
         <div class="form-group">
           <label for="exampleInputEmail" class="h5">Login</label>
-          <input type="email" class="form-control" id="exampleInputEmail" aria-describedby="emailPasswordHelp" placeholder="example@email.com">
+          <input 
+            required 
+            minlength="5"
+            ngModel
+            #email="ngModel"
+            name="email"
+            type="email" 
+            class="form-control" 
+            id="exampleInputEmail" 
+            aria-describedby="emailPasswordHelp" 
+            placeholder="example@email.com">
+            <div *ngIf="email.touched && !email.valid">
+              <div class="alert alert-danger" *ngIf="email.errors.required">
+                Username is required
+              </div>
+              <div class="alert alert-danger" *ngIf="email.errors.minlength">
+                Email or username must be at minimum 
+                {{ email.errors.minlength.requiredLength }}
+                characters long
+              </div>
+            </div>
         </div>
+
         <div class="form-group">
-          <input type="password" class="form-control" id="exampleInputPassword" aria-describedby="emailPasswordHelp" placeholder="Password">
+          <input 
+          required
+          minlength="3"
+          ngModel
+          #password="ngModel"
+          name="password"
+          type="password" 
+          class="form-control" 
+          id="exampleInputPassword" 
+          aria-describedby="emailPasswordHelp" 
+          placeholder="Password">
+            <div *ngIf="password.touched && !password.valid">
+              <div class="alert alert-danger" *ngIf="password.errors.required">
+                Password is required
+              </div>
+              <div class="alert alert-danger" *ngIf="password.errors.minlength">
+                Password must be at minimum
+                {{ password.errors.minlength.requiredLength }}
+                characters long
+              </div>
+            </div>
           <div class="form-check">
             <label class="form-check-label">
               <input type="checkbox" class="form-check-input">
@@ -21,7 +62,7 @@
               <br>Not a member? Sign up now</a>
           </small>
         </div>
-        <button type="submit" class="btn btn-primary" id="form-submit">
+        <button [disabled]="!f.valid" type="submit" class="btn btn-primary" id="form-submit">
           Sign in
         </button>
       </form>

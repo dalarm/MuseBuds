@@ -44,6 +44,10 @@ li {
     opacity: 0.5;
 }
 
+.form-control.ng-invalid.ng-touched {
+    border: 2px solid red; 
+}
+
 #logon-box {
     margin-top: 15em; 
 }
