@@ -129,10 +129,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 
-STATICFILES_DIRS = [
-	('node_modules', 'static/angular-musebuds/node_modules'),
-]
-
 STATIC_URL = '/static/'
 LOGIN_REDIRECT_URL = '/'
 MEDIA_URL = '/images/'
@@ -148,3 +144,9 @@ REST_FRAMEWORK = {
     'PAGE_SIZE' : 10
 }
 
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+	('node_modules', 'static/angular-musebuds/node_modules'),
+]

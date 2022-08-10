@@ -3,32 +3,32 @@
 <html lang="en">
 
 
-<head> 
-	<meta name="referrer" content="origin" />
-	<meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-	{% load staticfiles %}
-	<!-- <link rel="stylesheet" type="text/css" href="{% static 'home/assets/css/style.css' %}"/> -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+	<head>
+		<meta name="referrer" content="origin" />
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		{% load static %}
+		<link rel="stylesheet" type="text/css" href="{% static 'home/assets/css/style.css' %}" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
 
-</head>
+	</head>
 
-<body>
-lol
+	<body>
+		lol
 
-<h2>{{ user.get_full_name }}</h2>
-<ul>
-  <li>Username: {{ user.username }}</li>
-  <li>Location: {{ user.profile.location }}</li>
-  <li>Birth Date: {{ user.profile.birth_date }}</li>
-</ul>
-</body>	
-{% block content %}
-{% endblock %}
+		<h2>{{ user.get_full_name }}</h2>
+		<ul>
+			<li>Username: {{ user.username }}</li>
+			<li>Location: {{ user.profile.location }}</li>
+			<li>Birth Date: {{ user.profile.birth_date }}</li>
+		</ul>
+	</body>
+	{% block content %}
+	{% endblock %}
 
-</html> 
+</html>
 
 
 <footer>

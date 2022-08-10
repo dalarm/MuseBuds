@@ -4,7 +4,7 @@ from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django import forms
 from multiselectfield import MultiSelectField
-from django.core.urlresolvers import reverse
+from django.urls import reverse
 # Create your models here.
 
 class Profile(models.Model):
